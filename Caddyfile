@@ -1,0 +1,16 @@
+:80 {
+    # 1) API
+    handle /api/* {
+        reverse_proxy api:3000
+    }
+
+    # 2) SPA-fallback: всё остальное → index.html
+    handle {
+        root * /srv
+        try_files {path} /index.html
+        file_server
+    }
+
+    # Сжатие
+    encode gzip zstd
+}
