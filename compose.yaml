@@ -33,3 +33,4 @@ volumes:
   pgdata:
 
 #nerdctl compose up -d --build
+#nerdctl compose down -v
