@@ -41,3 +41,23 @@ services:
 
 volumes:
   pgdata:
+
+#установить podman-compose
+
+#на virtual machine не работает cgroup
+#podman machine ssh
+#mkdir -p ~/.config/containers
+#cat > ~/.config/containers/containers.conf << 'EOF'
+#[engine]
+#cgroup_manager = "cgroupfs"
+#EOF
+#exit
+#podman machine stop
+#podman machine start
+
+#при запуске container автоматически не пробросился portproxy
+#wsl hostname -I -> api
+#netsh interface portproxy add v4tov4 listenport=8080 listenaddress=0.0.0.0 connectport=8080 connectaddress=api
+
+#podman-compose up -d --build
+#podman-compose down -v
