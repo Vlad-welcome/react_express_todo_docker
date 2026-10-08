@@ -43,6 +43,7 @@ volumes:
   pgdata:
 
 #установить podman-compose
+#добавить путь podman-compose в %PATH% (в pyton/script)
 
 #на virtual machine не работает cgroup
 #podman machine ssh
